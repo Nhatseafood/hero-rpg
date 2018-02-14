@@ -1,3 +1,5 @@
+import random
+
 class Character:
     def alive(self):
         if self.health < 0:
@@ -12,7 +14,7 @@ class Hero(Character):
         self.health = health
         self.power = power
     def attack(self, enemy):
-        enemy.health -= self.power
+        enemy.health -= self.power 
         print("You do {} damage to the goblin.".format(self.power))
         if enemy.health <= 0:
                 print("The goblin is dead.") 
